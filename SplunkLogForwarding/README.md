@@ -37,7 +37,7 @@ The files are also part of this repo. In order the changes to take effect the Sp
 In order Runecast to be able to parse correctly the forwarded logs, additional filter needs to be set. For convenience, script for adding the filter is available on our public github repository. Below is how it can be downloaded and executed from Runecast Analyzer:
 
 1. Log in to Runecast Analyzer via console (default credentials: rcadmin / admin)
-2. Download the file with - wget https://raw.githubusercontent.com/Runecast/public/master/addFilter.sh (it will download at the current location)
+2. Download the file with - wget https://raw.githubusercontent.com/Runecast/public/master/SplunkLogForwarding/addFilter.sh (it will download at the current location)
 3. Mark as executable - chmod +x addFilter.sh
 4. Execute the script as root (default password: admin) - sudo ./addFilter.sh. The script will add the custom filter and restart logstash service.
 
