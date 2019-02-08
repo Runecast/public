@@ -37,6 +37,7 @@ Write-Host "Connection to $vc failed" -ForegroundColor red
 			Cpu = $hv.Hardware.CpuPkg
 			MemorySize = $hv.Hardware.memorySize
 			BiosVersion = $hv.Hardware.BiosInfo.BiosVersion
+			BiosVendor = $hv.Hardware.BiosInfo.Vendor
 			PciDevices = $ec.hardware.pci.list.invoke()
 			SoftwareVibs = $ec.software.vib.list.Invoke()
 			NetworkNics = $networkNics
