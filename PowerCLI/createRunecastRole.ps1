@@ -30,6 +30,8 @@ $privileges = @(
     "VirtualMachine.Config.AdvancedConfig"
     "Extension.Register"
     "Extension.Update"
+    "Profile.View"
+    "Profile.Edit"
 )
 #End of Runecast role definition
 
