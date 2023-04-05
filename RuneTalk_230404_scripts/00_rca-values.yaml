@@ -1,0 +1,6 @@
+global:
+  hostname: rca.localhost
+nginx:
+  service:
+    tls:
+      enabled: true

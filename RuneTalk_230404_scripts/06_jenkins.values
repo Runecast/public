@@ -1,0 +1,17 @@
+controller:
+  adminSecret: true
+  adminUser: admin
+  adminPassword: admin
+  installLatestPlugins: true
+  numExecutors: 1
+  ingress:
+     enabled: true
+     paths: []
+     apiVersion: "extensions/v1beta1"
+     hostName: jenkins.localhost
+  additionalPlugins:
+    - "timestamper"
+    - "pipeline-utility-steps"
+    - "http_request"
+persistence:
+  enabled: true # So that we have a PVC that we can backup
