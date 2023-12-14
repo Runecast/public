@@ -42,12 +42,13 @@ foreach ($vc in $vCenters) {
 
     if ($vcConnection) {
         $rcRole = $null
-        Write-Host "Creating new role:  $runecastRoleName"
-        $rcRole = New-VIRole -Name $runecastRoleName -Privilege (Get-VIPrivilege -id $privileges) -ErrorAction SilentlyContinue
+        Write-Host "Creating new role: $runecastRoleName"
+        $rcRole = New-VIRole -Name $runecastRoleName -Privilege (Get-VIPrivilege -id $privileges -Server $vc) -Server $vc -ErrorAction SilentlyContinue
         if ($rcRole) {
             Write-Host "$runecastRoleName role created succesfully on vCenter $vc" -ForegroundColor Green
         } else {
             Write-Host "Error while creating $runecastRoleName role on vCenter $vc" -ForegroundColor Red
+            Write-Host "$($Error[0].Exception.Message)" -ForegroundColor Red
         }
 
         #Disconnect from vCenter
